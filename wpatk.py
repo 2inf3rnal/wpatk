@@ -99,7 +99,7 @@ print(F.GREEN + index)
 print(F.GREEN + "[+]" + F.WHITE + " Site alvo: {}".format(url))
 user_agent = {'User-agent': 'Mozilla/5.0'}
 if param.enumerar:
-	checa = r.get(enum, headers=user_agent[0])
+	checa = r.get(enum, headers=user_agent)
 	if checa.status_code != 404 and "slug" in checa.text:
 		print(F.GREEN + "[+]" + F.WHITE + " Conexão estavel.")
 		print(F.GREEN + "\n[*]" + F.WHITE + " Enumerando usuarios...")
